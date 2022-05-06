@@ -93,14 +93,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                //var fstream = new FileStream("log.txt", FileMode.Open);
-                //byte[] buffer = new byte[fstream.Length];
-                //fstream.Read(buffer, 0, buffer.Length);
-                //string stat = Encoding.Default.GetString(buffer);
-                //textBox3.Text = stat;
-                //fstream.Close();
                 var stat = (File.ReadLines("log.txt")).ToList();
-                //textBox3.Text += stat[0] + "\n";
                 foreach (var line in stat)
                     textBox3.Text += line + "\r" + "\n";
             }
